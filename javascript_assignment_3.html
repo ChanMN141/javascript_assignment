@@ -1,0 +1,54 @@
+
+<html>
+  <body>
+    <h3>People whose names start with "B"</h3>
+    <ul id="name-list"></ul>
+
+    <script>
+      const people = [
+        "Alice Anderson",
+        "Aaron Adams",
+        "Bella Brown",
+        "Brian Black",
+        "Cathy Carter",
+        "Charles Cooper",
+        "Diana Davis",
+        "Daniel Drake",
+        "Ella Evans",
+        "Ethan Edwards",
+        "Fiona Fisher",
+        "Frank Foster",
+        "Grace Green",
+        "Gavin Gray",
+        "Hannah Harris",
+        "Henry Hill",
+        "Isabella Ingram",
+        "Ian Irving",
+        "Jack Johnson",
+        "Julia James"
+      ];
+
+      // Hardcoded letter to filter
+      const firstLetter = "B";
+
+      // Filter names starting with the chosen letter
+      const result = people.filter(person => person.charAt(0) === firstLetter);
+
+      // Get the HTML element
+      const nameList = document.getElementById("name-list");
+
+      // Function to append items to a list
+      function appendItems(listElement, items) {
+        items.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          listElement.appendChild(li);
+        });
+      }
+
+      // Append filtered names
+      appendItems(nameList, result);
+    </script>
+  </body>
+
+
